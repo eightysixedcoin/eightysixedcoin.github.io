@@ -9,7 +9,6 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html, body {
       width: 100%;
-      overflow-x: hidden;
       background: #000;
       font-family: Arial, sans-serif;
     }
@@ -20,12 +19,11 @@
       width: 100%;
     }
 
-    /* FULL-WIDTH RESPONSIVE IMAGE */
+    /* FULL-WIDTH RESPONSIVE IMAGE (use width:100%) */
     section img {
       display: block;
-      width: 100vw;
-      max-width: 100%;
-      height: auto;
+      width: 100%;      /* ensures image fits container width */
+      height: auto;     /* auto height to preserve aspect ratio */
     }
 
     /* OVERLAY (optional) */
@@ -34,7 +32,7 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
+      height: 100%;   /* matches section height driven by img */
       display: flex;
       align-items: center;
       justify-content: center;
@@ -97,5 +95,18 @@
     <div class="overlay">Section 8</div>
   </section>
 
+  <!-- SECTION 9 -->
+  <section id="section9">
+    <img src="assets/images/section9.png" alt="Section 9">
+    <div class="overlay">Section 9</div>
+  </section>
+
+  <!-- SECTION 10 -->
+  <section id="section10">
+    <img src="assets/images/section10.png" alt="Section 10">
+    <div class="overlay">Section 10</div>
+  </section>
+
 </body>
 </html>
+
