@@ -1,91 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio – EightySixed Coin</title>
-  <!-- UIkit CSS -->
-  <link rel="stylesheet" href="css/uikit.css" />
-  <!-- Your custom styles -->
-  <link rel="stylesheet" href="css/styles.css" />
-  <style>
-    /* Custom section styling */
-    section { position: relative; width: 100%; }
-    section img { display: block; width: 100%; height: auto; }
-    .overlay {
-      position: absolute; top: 0; left: 0;
-      width: 100%; height: 100%;
-      display: flex; align-items: center; justify-content: center;
-      background: rgba(0,0,0,0.3); color: #fff;
-      font-size: clamp(2rem, 8vw, 5rem);
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
-      pointer-events: none;
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat&family=IBM+Plex+Mono:wght@300&family=Rubik:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <title>Hosein Baseri | Front-End Developer</title>
+  <meta name="description"
+    content="Hi I’m Hosein Baseri, a front-end engineer based in Shiraz, Iran. Specializing in MERN stack development, I create robust web applications. With a fusion of technical expertise and design sensibilities, I craft visually stunning interfaces for exceptional user experiences.">
+  <meta name="keywords"
+    content="hosein,ho3ein,ho3einwave,hoseinwave,hosein baseri,hosein wave, ho3ein wave, front end developer, shiraz, iran, developer">
+  <meta name="author" content="Hosein Baseri">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Hosein Baseri | Front-End Developer">
+  <meta property="og:description"
+    content="Hi I’m Hosein Baseri, a front-end engineer based in Shiraz, Iran. Specializing in MERN stack development, I create robust web applications. With a fusion of technical expertise and design sensibilities, I craft visually stunning interfaces for exceptional user experiences.">
+  <meta property="og:image" content="https://hoseinwave.ir/avatar.png">
+  <meta property="og:url" content="https://hoseinwave.ir">
+  <meta property="og:type" content="website">
+  <meta name="twitter:title" content="Hosein Baseri | Front-End Developer">
+  <meta name="twitter:description"
+    content="Hi I’m Hosein Baseri, a front-end engineer based in Shiraz, Iran. Specializing in MERN stack development, I create robust web applications. With a fusion of technical expertise and design sensibilities, I craft visually stunning interfaces for exceptional user experiences.">
+  <meta name="twitter:image" content="https://hoseinwave.ir/avatar.png">
+  <meta name="twitter:card" content="summary_large_image">
 </head>
+
 <body>
-  <!-- Primary Navbar -->
-  <nav class="uk-navbar-container uk-position-fixed uk-width-1-1 uk-light" uk-navbar>
-    <div class="uk-navbar-left">
-      <a href="#section1" class="uk-navbar-item uk-logo">86D Coin</a>
-    </div>
-    <div class="uk-navbar-right">
-      <ul class="uk-navbar-nav">
-        <li><a href="#section1" uk-scroll>Home</a></li>
-        <li><a href="#section2" uk-scroll>About</a></li>
-        <li><a href="#section3" uk-scroll>Projects</a></li>
-        <li><a href="#section4" uk-scroll>Demo</a></li>
-        <li><a href="#section5" uk-scroll>Gallery</a></li>
-        <li><a href="#section6" uk-scroll>Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Sections 1–10 -->
-  <section id="section1">
-    <img src="assets/images/section1.png" alt="Section 1">
-    <div class="overlay">Welcome to 86D</div>
-  </section>
-  <section id="section2">
-    <img src="assets/images/section2.png" alt="Section 2">
-    <div class="overlay">About EightySixed</div>
-  </section>
-  <section id="section3">
-    <img src="assets/images/section3.png" alt="Section 3">
-    <div class="overlay">Tokenomics</div>
-  </section>
-  <section id="section4">
-    <img src="assets/images/section4.png" alt="Section 4">
-    <div class="overlay">Roadmap</div>
-  </section>
-  <section id="section5">
-    <img src="assets/images/section5.png" alt="Section 5">
-    <div class="overlay">Gallery</div>
-  </section>
-  <section id="section6">
-    <img src="assets/images/section6.png" alt="Section 6">
-    <div class="overlay">Media Teasers</div>
-  </section>
-  <section id="section7">
-    <img src="assets/images/section7.png" alt="Section 7">
-    <div class="overlay">Community</div>
-  </section>
-  <section id="section8">
-    <img src="assets/images/section8.png" alt="Section 8">
-    <div class="overlay">Staking</div>
-  </section>
-  <section id="section9">
-    <img src="assets/images/section9.png" alt="Section 9">
-    <div class="overlay">Contact Us</div>
-  </section>
-  <section id="section10">
-    <img src="assets/images/section10.png" alt="Section 10">
-    <div class="overlay">Join the Movement</div>
-  </section>
-
-  <!-- UIkit JS -->
-  <script src="js/uikit.js"></script>
-  <script src="js/uikit-icons.js"></script>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
 </body>
+
 </html>
