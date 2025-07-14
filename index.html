@@ -1,346 +1,373 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eighty Sixed (86D) Coin</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eighty Sixed (86D) Coin</title>
 
-    body {
-      background-color: #000000;
-      color: #000000;
-      font-family: 'Courier New', monospace;
-    }
-    .pixel-header {
-      font-family: 'Press Start 2P', cursive;
-      letter-spacing: 2px;
-      font-size: 1.5rem;
-      color: #000000;
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    .bg-zero-000 { background-color: #ffffff !important; }
-    .bg-zero-050 { background-color: #999999 !important; }
-    .bg-zero-100 { background-color: #000000 !important; }
-	.bg-zero-150 { background-color: #ff0000 !important; }
-    .bg-zinc-100 { background-color: #000000 !important; }
-    .bg-zinc-900 { background-color: #330000 !important; }
-    .bg-zinc-700 { background-color: #ff0000 !important; }
-    .bg-zinc-800 { background-color: #4d0000 !important; }
-    .border-zinc-700 { border-color: #ff0000 !important; }
-    .text-zero-000 { color: #000000 !important; }
-    .text-zero-050 { color: #999999 !important; }
-    .text-zero-100 { color: #FFFFFF !important; }
-	.text-zero-150 { color: #333333 !important; }
-    .text-zinc-400 { color: #ff0000 !important; }
-    .text-zinc-300 { color: #ffcccc !important; }
-    .text-zinc-500 { color: #ffaa99 !important; }
-    .text-zinc-600 { color: #ff9999 !important; }
-    .text-zinc-700 { color: #ff8888 !important; }
-    .text-zinc-800 { color: #ff7777 !important; }
-    .text-zinc-900 { color: #ff6666 !important; }
-    .text-white { color: #fff0f0 !important; }
-    .text-red { color: #ff0000 !important; }
-    .bg-zinc-700 { background-color: #660000 !important; }
-    .text-green-400, .text-green-500 { color: #ffdddd !important; }
-    .text-yellow-400 { color: #ffd9d9 !important; }
-    .text-blue-400 { color: #ffcccc !important; }
-    .text-purple-400 { color: #ffbbbb !important; }
-    .bg-purple-400 { background-color: #ffbbbb !important; }
-  </style>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Google Fonts: Press Start 2P for pixelated headers -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  <style>
-    body {
-      background-color: #000000;
-      color: #ccc;
-      font-family: 'Courier New', monospace;
-    }
-    .pixel-header {
-      font-family: 'Press Start 2P', cursive;
-      letter-spacing: 2px;
-      font-size: 1.5rem;
-      color: #fff;
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    .custom-player {
-    width: 100%;
-    max-width: 860px;
-    margin: 10px auto;
-    display: block;
-    background-color: #000000;
-    padding: 10px;
-    border-radius: 4px;
-  }
-  </style>
+    <style>
+        /* Base body styles */
+        body {
+            background-color: #000000; /* Black background */
+            color: #ccc; /* Light grey default text color */
+            font-family: 'Courier New', monospace; /* Monospace font for body text */
+        }
+
+        /* Custom header style for pixelated font */
+        .pixel-header {
+            font-family: 'Press Start 2P', cursive;
+            letter-spacing: 2px;
+            font-size: 1.5rem;
+            color: #fff; /* White color for pixel header */
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        /* Custom color definitions - Overriding some Tailwind defaults for specific theme */
+        /* 'Zero' custom colors */
+        .bg-zero-000 { background-color: #ffffff !important; } /* White background */
+        .bg-zero-050 { background-color: #999999 !important; } /* Grey background */
+        .bg-zero-100 { background-color: #000000 !important; } /* Black background */
+        .bg-zero-150 { background-color: #ff0000 !important; } /* Red background */
+        .bg-zero-200 { background-color: #1a1a1a !important; } /* Dark grey background (defined) */
+
+        .text-zero-000 { color: #000000 !important; } /* Black text */
+        .text-zero-050 { color: #999999 !important; } /* Grey text */
+        .text-zero-100 { color: #FFFFFF !important; } /* White text */
+        .text-zero-150 { color: #333333 !important; } /* Dark grey text */
+
+        /* Overridden Tailwind 'Zinc' colors for specific theme aesthetics */
+        .bg-zinc-100 { background-color: #000000 !important; } /* Black */
+        .bg-zinc-900 { background-color: #330000 !important; } /* Dark red/brown */
+        .bg-zinc-700 { background-color: #660000 !important; } /* Darker red (resolved conflict) */
+        .bg-zinc-800 { background-color: #4d0000 !important; } /* Even darker red/brown */
+        .border-zinc-700 { border-color: #ff0000 !important; } /* Bright red border */
+
+        .text-zinc-400 { color: #ff0000 !important; } /* Bright red text */
+        .text-zinc-300 { color: #ffcccc !important; } /* Light pink text */
+        .text-zinc-500 { color: #ffaa99 !important; } /* Light orange/pink text */
+        .text-zinc-600 { color: #ff9999 !important; } /* Pink text */
+        .text-zinc-700 { color: #ff8888 !important; } /* Lighter red text */
+        .text-zinc-800 { color: #ff7777 !important; } /* Even lighter red text */
+        .text-zinc-900 { color: #ff6666 !important; } /* Lightest red text */
+
+        /* Other specific color overrides */
+        .text-white { color: #fff0f0 !important; } /* Off-white text */
+        .text-red { color: #ff0000 !important; } /* Pure red text */
+        /* Note: These are named 'green' but are defined as pinkish hues */
+        .text-green-400, .text-green-500 { color: #ffdddd !important; }
+        .text-yellow-400 { color: #ffd9d9 !important; } /* Lightest pink text */
+        .text-blue-400 { color: #ffcccc !important; } /* Light pink text */
+        .text-purple-400 { color: #ffbbbb !important; } /* Pink/purple text */
+        .bg-purple-400 { background-color: #ffbbbb !important; } /* Pink/purple background */
+
+        /* Custom player for audio */
+        .custom-player {
+            width: 100%;
+            max-width: 860px;
+            margin: 10px auto;
+            display: block;
+            background-color: #000000;
+            padding: 10px;
+            border-radius: 4px; /* Kept this one as it's for the audio player specifically */
+        }
+    </style>
 </head>
 <body class="p-6 text-sm">
 <main class="max-w-6xl mx-auto space-y-6">
-	<div><p align="center" class="bg-zero-100 border text-white mb-2"><BR>
-	  &#9679; &nbsp; L A U N C H I N G  &nbsp;  A U G U S T  &nbsp; 6 T H &nbsp; 2 0 2 5 &nbsp; &#9679;<BR><BR></p>
-</div>
-<p class="text-zinc-300" align="right" ><img src="assets/images/eightySixedHeaderRightAlignTitle.png" alt=""/>
-<div class="text-red mb-2" align=left>
-	<p align="left"><a href="#AboutSection">ABOUT</a> - <a href="#TokenomicsSection">TOKENOMICS</a> - ROADMAP - BUY - <a href="#DisclaimerSection">DISCLAIMER</a></p>
-     </div>
-      <div class="text-zinc-400 mb-2"><img src="assets/images/section86d.png" alt=""/>
-</p>
+
+    <!-- Launching Soon Banner -->
+    <div>
+        <p class="bg-zero-100 border text-white mb-2 text-center py-4">
+            &#9679; &nbsp; L A U N C H I N G &nbsp; &nbsp; A U G U S T &nbsp; 6 T H &nbsp; 2 0 2 5 &nbsp; &#9679;
+        </p>
     </div>
-      </div>
-  </div>
-<div class="text-red mb-2" id="AboutSection">
-       <p align="left">ABOUT</p>
-     </div>
 
-<!-- Sectional Divide -->
-
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-
-
-    <div class="bg-zinc-400 border border-zinc-700 p-4 shadow-inner space-y-4">
-        <div class="flex items-center space-x-4">
-          <div>
-            <h1 class="text-xl text-white">EightySixed (86D)</h1>
-            <p class="text-zinc-400"><i>The meme coin that kills (supply)</i>"</p>
-          </div>
-        </div>
-      <p class="text-white">A one-of-a-kind, deflationary meme coin built on Solana around the cultural idea of “eighty-sixing” because fees suck and frankly, sometimes, so does this timeline. <br>
-        <br>
-      $86D, where spectacle meets scarcity and culture triggers consequence.</p>
-
-    <div class="grid grid-cols-6 gap-5">
-      <button onclick="window.open('https://x.com/EightySixedCoin', '_blank')" class="bg-zinc-700 border border-zinc-700 p-1 text-center"><center><img src="assets/images/icons8-twitter-50.png" width="50" height="50"/></center></button>
-      <button onclick="window.open('https://x.com/EightySixedCoin', '_blank')" class="bg-zinc-700 border border-zinc-700 p-1 text-center"><center><img src="assets/images/icons8-telegram-app-50.png"  width="50" height="50"/></center></button>
-      <button onclick="window.open('https://x.com/EightySixedCoin', '_blank')" class="bg-zinc-700 border border-zinc-700 p-1 text-center"><center><img src="assets/images/icons8-tiktok-50.png"  width="50" height="50"/></center></button>
-      <button onclick="window.open('https://x.com/EightySixedCoin', '_blank')" class="bg-zinc-700 border border-zinc-700 p-1 text-center"><center><img src="assets/images/icons8-discord-50.png"  width="50" height="50"/></center></button>
-      <button onclick="window.open('https://www.youtube.com/@EightySixedCoin', '_blank')" class="bg-zinc-700 border border-zinc-700 p-1 text-center"><center><img src="assets/images/youtube-logo-2431.png"  width="50" height="50"/></center></button>
-      <button class="bg-zinc-700 border border-zinc-700 p-1 text-center"><center><img src="assets/images/icons8-reddit-50.png"  width="50" height="50"/></center></button>
+    <!-- Navigation and Header Image -->
+    <div class="text-right">
+        <img src="assets/images/eightySixedHeaderRightAlignTitle.png" alt="Eighty Sixed Header" class="w-full h-auto"/>
     </div>
-   </div>
-
-<!-- Sectional Divide -->
-
-    
-<div> 
-      <div class="grid grid-cols-4 text-center">
-        <div><div class="text-white font-bold">8</div><div>Lists</div></div>
-        <div><div class="text-white font-bold">6</div><div>Clues Each</div></div>
-        <div><div class="text-white font-bold">1</div><div>Coin</div></div>
-        <div><div class="text-white font-bold">0</div><div>Mints</div></div>
-      </div><br>
-
-      <div class="bg-zinc-700 border border-zinc-700 p-3 text-green-400 font-mono text-xs h-32 overflow-auto">
-        <strong>eighty-six</strong> <i>/ˈā-tē-siks/</i> — verb <br><br>
-In Merriam-Webster's dictionary, "eighty-six" (or "86") is primarily defined as slang with several related meanings: to refuse service to a customer, to discard or get rid of something, or to eject or dismiss someone. 
-      </div><br>
-<button 
-  onclick="window.open('https://polygonscan.com/token/0xF58705Ad26E9C20A0e5ab62FecABD77fF81BAf96', '_blank')" 
-  class="w-full bg-zinc-400 border border-zinc-700 hover:bg-red-600 hover:border-red-600 p-2 text-center mt-2 text-white transition-colors duration-300">
-  0xF58705Ad26E9C20A0e5ab62FecABD77fF81BAf96
-</button>
-
-
+    <div class="text-red mb-2 text-left">
+        <a href="#AboutSection">ABOUT</a> - <a href="#TokenomicsSection">TOKENOMICS</a> - ROADMAP - BUY - <a href="#DisclaimerSection">DISCLAIMER</a>
     </div>
-</div>
-<div class="text-zero-150 mb-2">
-	<p align="center" class="text-white">THE LORE</p>
-</div>
-      <div class="bg-zero-200 border p-3 text-grey">
-<p class="text-white">A Battle Has Begun...<br>
-48 "TarGIFs", coded digital assets, have been unleashed upon the world—engineered to distract, divide, and destroy. Our hero, Eddie Sixed, and the 86D community are all that stand in their way.<br><br>
 
-Together, they aim to “eighty-six” these digital threats—to human decency, goodwill toward others, the rule of law, and the very idea of the American dream.
-</p>
-  </div>
+    <!-- Section Image Divider -->
+    <div class="text-zinc-400 mb-2">
+        <img src="assets/images/section86d.png" alt="Section Divider" class="w-full h-auto"/>
+    </div>
 
-<div class="text-zero-050 mb-2" align=left><br>
-<div class="text-zinc-400 mb-2"><img src="assets/images/fafo.png" alt=""/></div><br>
-<h1 align="center" class="text-white mb-2">WHY $86D WORKS</h1>
-</div>
-      <div class="bg-zero-200 border p-3 text-grey">
-<p class="text-white">
-<strong>Most meme coins vanish faster than a client list on Pam Bondi's desk.</strong> And honestly, we don't give a rat-fuck about your dog in glasses, your morbidly obese penguins, or how "problematic" your frog is.<br><br>
+    <!-- ABOUT Section Header -->
+    <div class="text-red mb-2" id="AboutSection">
+        <p class="text-left">ABOUT</p>
+    </div>
 
-Okay, that frog is kinda funny sometimes, but the bottom line is: meme coins are fun, then they're just... boring. The crypto landscape is littered with projects that have less personality than an AI-generated medical study.<br><br>
-
-<strong>This is where $86D steps in.</strong> It’s a coin for people who want to laugh, talk shit, and sometimes wish they could <strong>"eighty-six" the worlds problems away</strong>, one <strong>TarGIF</strong> at a time.<br><br>
-
-Rugs. Bots. Dead Discords. Exhausting right? Why not just make mechanics that you can't look away from; like a car crash, or Nancy Pelosi in a dashiki. Look, I don't want to hammer the point to death here, but $86D may not be the coin the world wants (that'd be Bitcoin), but $86D is the coin this world deserves. <strong>This is the people's pump. And the only dump around here is the dumpster fire we're all living in.</strong> So load up your bags, HODL tight, and <strong>let's burn some coins in it</strong>.
-</p>
-  </div>
-<div class="bg-black p-4">
-<div class="text-red mb-2" align=left id="TokenomicsSection">
-       <p align="left">TOKENOMICS</p><br>
-  </div>
-
-    <!-- Three Column Section -->
+    <!-- About Content Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="bg-zinc-900 border border-zinc-700 p-4 shadow-inner max-h-[350px] overflow-auto">
-        <div class="text-zinc-400 mb-2">Token Details</div>
-        <div class="space-y-2">
-          <div class="bg-zinc-800 border border-zinc-700 p-2 flex justify-between"><span>Token Name</span><span>EightySixed</span></div>
-          <div class="bg-zinc-800 border border-zinc-700 p-2 flex justify-between"><span>Symbol</span><span>86D</span></div>
-          <div class="bg-zinc-800 border border-zinc-700 p-2 flex justify-between"><span>Network</span><span>Polygon</span></div>
-          <div class="bg-zinc-800 border border-zinc-700 p-2 flex justify-between"><span>Standard</span><span>ERC 20</span></div>
-          <div class="bg-zinc-800 border border-zinc-700 p-2 flex justify-between"><span>Total Supply</span><span>86,000,000,000 (Fixed)</span></div>
-          <div class="bg-zinc-800 border border-zinc-700 p-2 flex justify-between"><span>Decimals</span><span>18</span></div>
-          
+        <div class="bg-zinc-400 border border-zinc-700 p-4 shadow-inner space-y-4">
+            <div class="flex items-center space-x-4">
+                <div>
+                    <h1 class="text-xl text-white">EightySixed (86D)</h1>
+                    <p class="text-zinc-400"><i>"The meme coin that kills (supply)"</i></p>
+                </div>
+            </div>
+            <p class="text-white">A one-of-a-kind, deflationary meme coin built on Solana around the cultural idea of “eighty-sixing” because fees suck and frankly, sometimes, so does this timeline. <br>
+                <br>
+                $86D, where spectacle meets scarcity and culture triggers consequence.
+            </p>
+
+            <!-- Social Media Buttons -->
+            <div class="grid grid-cols-6 gap-5">
+                <button onclick="window.open('https://x.com/EightySixedCoin', '_blank')" class="bg-zinc-700 border border-zinc-700 p-1 text-center">
+                    <img src="assets/images/icons8-twitter-50.png" width="50" height="50" alt="Twitter"/>
+                </button>
+                <button onclick="window.open('https://x.com/EightySixedCoin', '_blank')" class="bg-zinc-700 border border-zinc-700 p-1 text-center">
+                    <img src="assets/images/icons8-telegram-app-50.png" width="50" height="50" alt="Telegram"/>
+                </button>
+                <button onclick="window.open('https://x.com/EightySixedCoin', '_blank')" class="bg-zinc-700 border border-zinc-700 p-1 text-center">
+                    <img src="assets/images/icons8-tiktok-50.png" width="50" height="50" alt="TikTok"/>
+                </button>
+                <button onclick="window.open('https://x.com/EightySixedCoin', '_blank')" class="bg-zinc-700 border border-zinc-700 p-1 text-center">
+                    <img src="assets/images/icons8-discord-50.png" width="50" height="50" alt="Discord"/>
+                </button>
+                <button onclick="window.open('https://www.youtube.com/@EightySixedCoin', '_blank')" class="bg-zinc-700 border border-zinc-700 p-1 text-center">
+                    <img src="assets/images/youtube-logo-2431.png" width="50" height="50" alt="YouTube"/>
+                </button>
+                <button class="bg-zinc-700 border border-zinc-700 p-1 text-center">
+                    <img src="assets/images/icons8-reddit-50.png" width="50" height="50" alt="Reddit"/>
+                </button>
+            </div>
         </div>
-      </div>
-      <div class="bg-zinc-900 border border-zinc-700 p-4 shadow-inner max-h-[350px] overflow-auto">
-        <div class="text-zinc-400 mb-2">Initial Distribution</div>
-        <div class="text-white font-bold text-xl">Wallet</div>
-        <div class="text-zinc-300">Supply %</div>
-        <div class="space-y-1 mt-2">
-          <div>Liquidity Pool 69.9% [Burned]
-          <div class="bg-zinc-700 h-2 mt-1"><div class="bg-purple-400 h-2" style="width: 70%"></div></div></div>
-          <div>Staking Vault 8.6% [Staking Contract Forthcoming]
-          <div class="bg-zinc-700 h-2 mt-1"><div class="bg-purple-400 h-2" style="width: 9%"></div></div></div>
-          <div>Dev & Reserve Fund 8.6% [For All Burns]<div class="bg-zinc-700 h-2 mt-1"><div class="bg-purple-400 h-2" style="width: 9%"></div></div></div>
-          <div>Founders Wallet 8.6% [Time Locked Vesting]<div class="bg-zinc-700 h-2 mt-1"><div class="bg-purple-400 h-2" style="width: 9%"></div></div></div>
-          <div>Community Wallet 4.3% [Giveaways & Partnerships]<div class="bg-zinc-700 h-2 mt-1"><div class="bg-purple-400 h-2" style="width: 4%"></div></div></div>
+
+        <!-- Stats and Definition -->
+        <div>
+            <div class="grid grid-cols-4 text-center">
+                <div><div class="text-white font-bold">8</div><div>Lists</div></div>
+                <div><div class="text-white font-bold">6</div><div>Clues Each</div></div>
+                <div><div class="text-white font-bold">1</div><div>Coin</div></div>
+                <div><div class="text-white font-bold">0</div><div>Mints</div></div>
+            </div><br>
+
+            <div class="bg-zinc-700 border border-zinc-700 p-3 text-green-400 font-mono text-xs h-32 overflow-auto">
+                <strong>eighty-six</strong> <i>/ˈā-tē-siks/</i> — verb <br><br>
+                In Merriam-Webster's dictionary, "eighty-six" (or "86") is primarily defined as slang with several related meanings: to refuse service to a customer, to discard or get rid of something, or to eject or dismiss someone.
+            </div><br>
+            <button onclick="window.open('https://polygonscan.com/token/0xF58705Ad26E9C20A0e5ab62FecABD77fF81BAf96', '_blank')"
+                    class="w-full bg-zinc-400 border border-zinc-700 hover:bg-red-600 hover:border-red-600 p-2 text-center mt-2 text-white transition-colors duration-300">
+                0xF58705Ad26E9C20A0e5ab62FecABD77fF81BAf96
+            </button>
         </div>
-      </div>
-	</div>
-<div class="text-zero-050 mb-2" align=left><br>
-<br>
-<h1 align="center" class="text-white mb-2">LIST, CLUE & BURN MECHANICS</h1>
-</div><br>
-      <div class="bg-zero-200 border p-3 text-grey">
-<p class="text-white">
-Every 86 days, a new <strong>List</strong> emerges, each containing six "TarGIFs" for Eddie &amp; community to <strong>“eighty-six"</strong>. If successful, <strong> coins burn</strong><br>
-</p>
-  </div>	
-</div>
-  </div>
-  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-    <div class="bg-zero-150 border border-zinc-700 p-4 shadow-inner max-h-[350px] overflow-auto">
-      <span class="text-xs text-red-400 bg-black border border-red-700 px-2 py-1 inline-block mt-2">Guaranteed Burns</span>
-      <h3 class="text-white font-bold font-mono mt-4">WHEN A LIST IS LAUNCHED</h3>
-      <h4 class="text-white font-mono">860,000 COINS BURN</h4>
-      <h3 class="text-white font-bold font-mono mt-4">WHEN A TARGIF IS REVEALED</h3>
-      <h4 class="text-white font-mono">86,000 COINS BURN</h4>
     </div>
 
-    <!-- Possible Burns -->
-    <div class="bg-zero-150 border border-zinc-700 p-4 shadow-inner max-h-[350px] overflow-auto">
-      <span class="text-xs text-red-400 bg-black border border-red-700 px-2 py-1 inline-block mt-2">Possible Burns</span>
-      <h3 class="text-white font-bold font-mono mt-4">WHEN A TARGIF IS "EIGHTY-SIXED"*</h3>
-      <h4 class="text-white font-mono"><STRONG>86,000,000</STRONG> COINS BURN</h4>
-      <h3 class="text-white font-bold font-mono mt-4">WHEN A FULL LIST IS "EIGHTY-SIXED" [RARE]**</h3>
-      <h4 class="text-white font-mono"><strong>860,000,000</strong> COINS BURN</h4>
-      <p class="text-white text-xs mt-3">*Always possible until the tarGIF is "EightySixed"</p>
-      <p class="text-white text-xs">**Window closes 86 days after List launch forever</p>
+    <!-- The Lore Section -->
+    <div class="text-zero-150 mb-2">
+        <p class="text-white text-center">THE LORE</p>
     </div>
-</div>
-      </div>
-  </div>
-      </div>
-</div>
-<div class="text-zero-050 mb-2" align=left>
-<p align="center" class="bg-zinc-900 text-white mb-2"><br>
-	  TARGIF EXAMPLE (MAY NOT BE INDICATIVE OF FUTURE TARGIFS/GAME LOGIC)<BR><BR></p>
-</div>
+    <div class="bg-zero-100 border p-3 text-grey">
+        <p class="text-white">A Battle Has Begun...<br>
+            48 "TarGIFs", coded digital assets, have been unleashed upon the world—engineered to distract, divide, and destroy. Our hero, Eddie Sixed, and the 86D community are all that stand in their way.<br><br>
+            Together, they aim to “eighty-six” these digital threats—to human decency, goodwill toward others, the rule of law, and the very idea of the American dream.
+        </p>
+    </div>
+
+    <!-- WHY $86D WORKS Section -->
+    <div class="text-zero-050 mb-2">
+        <img src="assets/images/fafo.png" alt="FAFO" class="w-full h-auto mb-2"/><br>
+        <h1 class="text-white mb-2 text-center">WHY $86D WORKS</h1>
+    </div>
+    <div class="bg-zero-200 border p-3 text-grey">
+        <p class="text-white">
+            <strong>Most meme coins vanish faster than a client list on Pam Bondi's desk.</strong> And honestly, we don't give a rat-fuck about your dog in glasses, your morbidly obese penguins, or how "problematic" your frog is.<br><br>
+            Okay, that frog is kinda funny sometimes, but the bottom line is: meme coins are fun, then they're just... boring. The crypto landscape is littered with projects that have less personality than an AI-generated medical study.<br><br>
+            <strong>This is where $86D steps in.</strong> It’s a coin for people who want to laugh, talk shit, and sometimes wish they could <strong>"eighty-six" the worlds problems away</strong>, one <strong>TarGIF</strong> at a time.<br><br>
+            Rugs. Bots. Dead Discords. Exhausting right? Why not just make mechanics that you can't look away from; like a car crash, or Nancy Pelosi in a dashiki. Look, I don't want to hammer the point to death here, but $86D may not be the coin the world wants (that'd be Bitcoin), but $86D is the coin this world deserves. <strong>This is the people's pump. And the only dump around here is the dumpster fire we're all living in.</strong> So load up your bags, HODL tight, and <strong>let's burn some coins in it</strong>.
+        </p>
+    </div>
+
+    <!-- Tokenomics Section -->
+    <div class="bg-black p-4">
+        <div class="text-red mb-2 text-left" id="TokenomicsSection">
+            <p>TOKENOMICS</p><br>
+        </div>
+
+        <!-- Tokenomics Details and Distribution -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-zinc-900 border border-zinc-700 p-4 shadow-inner max-h-[350px] overflow-auto">
+                <div class="text-zinc-400 mb-2">Token Details</div>
+                <div class="space-y-2">
+                    <div class="bg-zinc-800 border border-zinc-700 p-2 flex justify-between"><span>Token Name</span><span>EightySixed</span></div>
+                    <div class="bg-zinc-800 border border-zinc-700 p-2 flex justify-between"><span>Symbol</span><span>86D</span></div>
+                    <div class="bg-zinc-800 border border-zinc-700 p-2 flex justify-between"><span>Network</span><span>Polygon</span></div>
+                    <div class="bg-zinc-800 border border-zinc-700 p-2 flex justify-between"><span>Standard</span><span>ERC 20</span></div>
+                    <div class="bg-zinc-800 border border-zinc-700 p-2 flex justify-between"><span>Total Supply</span><span>86,000,000,000 (Fixed)</span></div>
+                    <div class="bg-zinc-800 border border-zinc-700 p-2 flex justify-between"><span>Decimals</span><span>18</span></div>
+                </div>
+            </div>
+            <div class="bg-zinc-900 border border-zinc-700 p-4 shadow-inner max-h-[350px] overflow-auto">
+                <div class="text-zinc-400 mb-2">Initial Distribution</div>
+                <div class="text-white font-bold text-xl">Wallet</div>
+                <div class="text-zinc-300">Supply %</div>
+                <div class="space-y-1 mt-2">
+                    <div>Liquidity Pool 69.9% [Burned]
+                        <div class="bg-zinc-700 h-2 mt-1"><div class="bg-purple-400 h-2" style="width: 70%"></div></div></div>
+                    <div>Staking Vault 8.6% [Staking Contract Forthcoming]
+                        <div class="bg-zinc-700 h-2 mt-1"><div class="bg-purple-400 h-2" style="width: 9%"></div></div></div>
+                    <div>Dev & Reserve Fund 8.6% [For All Burns]<div class="bg-zinc-700 h-2 mt-1"><div class="bg-purple-400 h-2" style="width: 9%"></div></div></div>
+                    <div>Founders Wallet 8.6% [Time Locked Vesting]<div class="bg-zinc-700 h-2 mt-1"><div class="bg-purple-400 h-2" style="width: 9%"></div></div></div>
+                    <div>Community Wallet 4.3% [Giveaways & Partnerships]<div class="bg-zinc-700 h-2 mt-1"><div class="bg-purple-400 h-2" style="width: 4%"></div></div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- List, Clue & Burn Mechanics Section -->
+        <div class="text-zero-050 mt-6"><br>
+            <h1 class="text-white text-center">LIST, CLUE & BURN MECHANICS</h1><br>
+        </div>
+        <div class="bg-zero-200 border p-3 text-grey">
+            <p class="text-white">
+                Every 86 days, a new <strong>List</strong> emerges, each containing six "TarGIFs" for Eddie &amp; community to <strong>“eighty-six"</strong>. If successful, <strong> coins burn</strong>
+            </p>
+        </div>
+
+        <!-- Burn Mechanics Details -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+            <!-- Guaranteed Burns -->
+            <div class="bg-zero-150 border border-zinc-700 p-4 shadow-inner max-h-[350px] overflow-auto"><center>
+                <span class="text-xs text-red-400 bg-black border border-red-700 px-2 py-1 inline-block mt-2">Guaranteed Burns</span>
+                <h3 class="text-white font-bold font-mono mt-4">WHEN A LIST IS LAUNCHED</h3>
+                <h4 class="text-white font-mono">860,000 COINS BURN</h4>
+                <h3 class="text-white font-bold font-mono mt-4">WHEN A TARGIF IS REVEALED</h3>
+                <h4 class="text-white font-mono">86,000 COINS BURN</h4></center>
+            </div>
+
+            <!-- Possible Burns -->
+            <div class="bg-zero-150 border border-zinc-700 p-4 shadow-inner max-h-[350px] overflow-auto"><center>
+                <span class="text-xs text-red-400 bg-black border border-red-700 px-2 py-1 inline-block mt-2">Possible Burns</span>
+                <h3 class="text-white font-bold font-mono mt-4">WHEN A TARGIF IS "EIGHTY-SIXED"*</h3>
+                <h4 class="text-white font-mono"><strong>86,000,000</strong> COINS BURN</h4>
+                <h3 class="text-white font-bold font-mono mt-4">WHEN A FULL LIST IS "EIGHTY-SIXED" [RARE]**</h3>
+                <h4 class="text-white font-mono"><strong>860,000,000</strong> COINS BURN</h4>
+                <p class="text-white text-xs mt-3">*Always possible until the tarGIF is "EightySixed"</p>
+                <p class="text-white text-xs">**Window closes 86 days after List launch forever</p></center>
+            </div>
+        </div>
+    </div>
+
+    <!-- TarGIF Example Section -->
+    <div class="text-zero-050 mb-2 mt-6">
+        <p class="bg-zinc-900 text-white mb-2 text-center py-4">
+            TARGIF EXAMPLE (MAY NOT BE INDICATIVE OF FUTURE TARGIFS/GAME LOGIC)
+        </p>
+    </div>
     <div class="flex justify-between items-center mb-3">
         <a href="#" class="bg-zero-100 border border-zinc-800 px-2 py-1 text-red">Example List 00</a>
-<h2 class="bg-zero-100 border border-zinc-800 px-2 py-1 text-red">&nbsp;ETA 0000/00/00&nbsp;</h2> 
+        <h2 class="bg-zero-100 border border-zinc-800 px-2 py-1 text-red">&nbsp;ETA 0000/00/00&nbsp;</h2>
     </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <div class="bg-zero-100 border border-zinc-100 p-5">
-          <h3 class="text-red">Example TarGIF 00:</h3>
-<br>
-		<img src="assets/gifs/redSaints.gif" alt=""/>
-        </div>
-        <div class="bg-zero-100 border border-zinc-100 p-5">
-          <h3 class="text-red">Example  Interpretation:</h3>
-<br>
-
-          <p class="text-white">"Two guns. Two brothers. Boondock Saints. Irish. Catholics.  Director Troy Duffy originally sought casting Mark Wahlberg as lead. Mark is Irish. Mark has a brother. Mark&nbsp;was lead in film called 2 Guns with a 'brother' named <span class="text-red">Denzel Washington</span>. Denzel was in a movie called Forsaken about a vengeful demon. Opposite of a saint...</p>
-          <p class="text-white">&nbsp;</p>
-          <p class="text-white">Hmmm...<br>
+            <h3 class="text-red">Example TarGIF 00:</h3>
             <br>
-            The subject matter this TarGIF references is probably..."</p>
+            <img src="assets/gifs/redSaints.gif" alt="Example TarGIF" class="w-full h-auto"/>
         </div>
-        
         <div class="bg-zero-100 border border-zinc-100 p-5">
-<h3 class="text-zero-050">Example Community Decipher A:</h3>
-<br>
-          <p class="text-red-400">"Scattered but I can see the logic and reached same conclusion."</p>
-          <br>
-          <h3 class="text-zero-050">Example Community Decipher B:</h3>
-          <p>&nbsp;</p>
-<p class="text-red-400">"Well-liked. Globally respected. Iconoclast. Doesn't seek to impact peoples lives in negative way. Brings entertainment to the world.  Nah..."</p>
-          <br>
-          <h3 class="text-zero-050">Example Community Consensus:</h3>
-          <p>&nbsp;</p>
-<p><text class="text-red-400">"No allegations. Nothing in news. Still highly regarded and well liked. 
-  <text class="text-red">Perfect</text>
-   health. Nope, nah, not him."</text><br><br><br>
-<img src="assets/gifs/red2.gif" alt=""/> </p>
-<br>
+            <h3 class="text-red">Example Interpretation:</h3>
+            <br>
+            <p class="text-white">"Two guns. Two brothers. Boondock Saints. Irish. Catholics. Director Troy Duffy originally sought casting Mark Wahlberg as lead. Mark is Irish. Mark has a brother. Mark was lead in film called 2 Guns with a 'brother' named <span class="text-red">Denzel Washington</span>. Denzel was in a movie called Forsaken about a vengeful demon. Opposite of a saint...</p>
+            <p class="text-white">&nbsp;</p>
+            <p class="text-white">Hmmm...<br>
+                <br>
+                The subject matter this TarGIF references is probably..."</p>
         </div>
-	</div><br>
-<div><p align="center" class="bg-zero-000 border border-zinc-700 text-black mb-2"><br>
-  <strong>EXAMPLE NOT A TARGIF. FIRST SIX TARGIFS REVEALED ON AUGUST 6TH 2025 LAUNCH</strong><br>
-  <BR></p>
-</div>
- <div class="text-zinc-400 mb-2" align="center"><br>
-   <img src="assets/gifs/americaSafe.gif" alt="" width="100%"/>
-	 </div>
- <div class="text-zinc-400 mb-2"><br><img src="assets/images/endIsNightLeftBucketAlign.png" alt=""/>
-	 </div>
-      </div>
-<div class="text-zinc-400 mb-2"><br><br>
-<h1 align="center" class="text-white mb-2">ENGAGEMENT, GIVEAWAYS &amp; MEDIA</h1>
-</div>
-<div class="bg-zero-200 border border-zinc-800 px-1 py-2 p-3 text-grey">
-<p class="text-zero-050">THE CYPHER GIVEAWAY<br>
-<text class="text-white">
-After every List drops the community has 43 days to submit their guess at what each TarGIF means for a chance to win 86,000 86D and a shot at 1 of 86 exclusive NFTs from our upcoming NFT launch. Three winners are chosen and awarded, one each from three different categories for every List reveal.<br><br>
-<h2 class="bg-zinc-700 border border-zinc-800 px-1 py-1 text-white">The "Best" Take - 86K Coins Awarded</h2><br>
-<h2 class="bg-zinc-700 border border-zinc-800 px-1 py-1 text-white">The "Worst"  Take - 86K Coins Awarded</h2><br>
-<h2 class="bg-zinc-700 border border-zinc-800 px-1 py-1 text-white">The "LMAO" Take - 86K Coins Awarded</h2></p><br>
-<p class="text-white">Which category each winner won is never identified, that'd be too easy and ain't nothing in this world easy.
-        <br></p>
-</div>
-<div class="text-zero-050 mb-2"><br>
-	<p align="center">MEDIA</p>
-</div>
-<div class="text-zero-150 mb-2">
-<p align="center">Eddie Sixed & The End Times <span class="text-red">"EightySixed Theme Teaser"</span></p>
-<audio controls loop preload="none" class="custom-player">
-  <source src="assets/audio/preLaunchPromoTheme.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
-	<p align="center">Eddie Sixed & The End Times <span class="text-red">"Country Wallet Teaser"</span></p>
-<audio controls loop preload="none" class="custom-player">
-  <source src="assets/audio/preLaunchTruthPromo.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
-</div>
-</div>
-<div class="text-red mb-2" align=left id="DisclaimerSection">
-       <p align="left">DISCLAIMER</p>
-  </div>
-    <div class="bg-zero-150 border border-zinc-700 p-1 shadow-inner mt-1">
-      
-      <div class="bg-zero-150 border border-zinc-700 p-3 text-green-400 font-mono text-xs h-32 overflow-auto">
-        <p>
-<strong>1. No Expectation of Profit:</strong> EightySixed (86D) is a high-risk, experimental, and deflationary meme token created for entertainment, community engagement, and satirical purposes. 86D tokens are not intended to be a financial investment. You should not acquire 86D tokens with any expectation of financial profit, appreciation, or any form of investment return. Participation in the 86D ecosystem involves significant risk, including the potential for complete and total loss of your funds.<br><br>
-<strong>2. Satirical and Entertainment Purpose:</strong> The 86D project and its associated themes, including the "List" and "TarGIF" mechanics, are intended as a form of entertainment, parody, and satire. The core mechanic is a fictional game centered on identifying and "eighty-sixing" the project's own created digital assets ("TarGIFs"). Any resemblance or reference to real-world entities, concepts, or events is for satirical and commentary purposes only and should not be interpreted otherwise. The project does not endorse or confirm any community interpretation of its clues.<br><br>
-<strong>3. No Ownership or Rights:</strong> The purchase or ownership of 86D tokens does not provide the holder with any equity, ownership, share, security, or any other interest in the EightySixed project or any affiliated entity. The tokens do not confer any rights to dividends, profits, or governance, except as may be explicitly and formally implemented through a future on-chain governance protocol.<br><br>
-<strong>4. No Liability:</strong> To the maximum extent permitted by the applicable law, the EightySixed project team, its founders, and any affiliated parties shall not be liable for any indirect, special, incidental, consequential, or other losses of any kind arising from your use of this website, whitepaper, your acquisition or use of 86D tokens, or your participation in the ecosystem. 
-      </div><br>
-<div class="text-zinc-400 mb-2"><img src="assets/images/section3.png" alt=""/></div>
+        <div class="bg-zero-100 border border-zinc-100 p-5">
+            <h3 class="text-zero-050">Example Community Decipher A:</h3>
+            <br>
+            <p class="text-red-400">"Scattered but I can see the logic and reached same conclusion."</p>
+            <br>
+            <h3 class="text-zero-050">Example Community Decipher B:</h3>
+            <p>&nbsp;</p>
+            <p class="text-red-400">"Well-liked. Globally respected. Iconoclast. Doesn't seek to impact peoples lives in negative way. Brings entertainment to the world. Nah..."</p>
+            <br>
+            <h3 class="text-zero-050">Example Community Consensus:</h3>
+            <p>&nbsp;</p>
+            <p class="text-red-400">"No allegations. Nothing in news. Still highly regarded and well liked.
+                <span class="text-red">Perfect</span>
+                health. Nope, nah, not him."</p>
+            <br>
+            <img src="assets/gifs/red2.gif" alt="Red 2 GIF" class="w-full h-auto"/>
+        </div>
+    </div>
+    <!-- TarGIF Disclaimer -->
+    <div>
+        <p class="bg-zero-200 text-white mb-2 text-center py-2">
+            NOT A TARGIF. FIRST SIX TARGIFS REVEALED ON 8/6 LAUNCH
+        </p>
     </div>
 
-  </div>
+    <!-- America Safe GIF -->
+    <div class="text-center mb-2">
+        <img src="assets/gifs/americaSafe.gif" alt="America Safe" class="w-full h-auto"/>
+    </div>
+
+    <!-- End is Night Image -->
+    <div class="text-left mb-2">
+        <img src="assets/images/endIsNightLeftBucketAlign.png" alt="End is Night" class="w-full h-auto"/>
+    </div>
+
+    <!-- Engagement, Giveaways & Media Section -->
+    <div class="text-zinc-400 mb-2">
+        <h1 class="text-white mb-2 text-center">ENGAGEMENT, GIVEAWAYS &amp; MEDIA</h1>
+    </div>
+    <div class="bg-zero-100 border border-zinc-800 px-1 py-2 p-3 text-grey">
+        <p class="text-zero-050">THE CYPHER GIVEAWAY<br>
+            <span class="text-white">
+                After every List drops the community has 43 days to submit their guess at what each "TarGIF" means for a chance to win 86,000 86D and a shot at 1 of 86 exclusive NFTs from our upcoming NFT launch. Three winners are chosen and awarded, one each from three different categories for every List reveal.<br><br>
+                <h2 class="bg-zinc-700 text-white">The "Best" Take - 86K Coins Awarded</h2><br>
+                <h2 class="bg-zinc-700 text-white">The "Worst" Take - 86K Coins Awarded</h2><br>
+                <h2 class="bg-zinc-700 text-white">The "LMAO" Take - 86K Coins Awarded</h2>
+            </span><br>
+            Which category each winner won is never identified, that'd be too easy and ain't nothing in this world easy.
+            <br>
+        </p>
+    </div>
+
+    <!-- Media Section -->
+    <div class="text-zero-050 mb-2 mt-6">
+        <p class="text-center">MEDIA</p>
+    </div>
+    <div class="text-zero-150 mb-2">
+        <p class="text-center">Eddie Sixed & The End Times <span class="text-red">"EightySixed Theme Teaser"</span></p>
+        <audio controls loop preload="none" class="custom-player">
+            <source src="assets/audio/preLaunchPromoTheme.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <p class="text-center">Eddie Sixed & The End Times <span class="text-red">"Country Wallet Teaser"</span></p>
+        <audio controls loop preload="none" class="custom-player">
+            <source src="assets/audio/preLaunchTruthPromo.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <!-- Disclaimer Section -->
+    <div class="text-red mb-2 text-left" id="DisclaimerSection">
+        <p>DISCLAIMER</p>
+    </div>
+    <div class="bg-zero-150 border border-zinc-700 p-1 shadow-inner mt-1">
+        <div class="bg-zero-150 border border-zinc-700 p-3 text-green-400 font-mono text-xs h-32 overflow-auto">
+            <p>
+                <strong>1. No Expectation of Profit:</strong> EightySixed (86D) is a high-risk, experimental, and deflationary meme token created for entertainment, community engagement, and satirical purposes. 86D tokens are not intended to be a financial investment. You should not acquire 86D tokens with any expectation of financial profit, appreciation, or any form of investment return. Participation in the 86D ecosystem involves significant risk, including the potential for complete and total loss of your funds.<br><br>
+                <strong>2. Satirical and Entertainment Purpose:</strong> The 86D project and its associated themes, including the "List" and "TarGIF" mechanics, are intended as a form of entertainment, parody, and satire. The core mechanic is a fictional game centered on identifying and "eighty-sixing" the project's own created digital assets ("TarGIFs"). Any resemblance or reference to real-world entities, concepts, or events is for satirical and commentary purposes only and should not be interpreted otherwise. The project does not endorse or confirm any community interpretation of its clues.<br><br>
+                <strong>3. No Ownership or Rights:</strong> The purchase or ownership of 86D tokens does not provide the holder with any equity, ownership, share, security, or any other interest in the EightySixed project or any affiliated entity. The tokens do not confer any rights to dividends, profits, or governance, except as may be explicitly and formally implemented through a future on-chain governance protocol.<br><br>
+                <strong>4. No Liability:</strong> To the maximum extent permitted by the applicable law, the EightySixed project team, its founders, and any affiliated parties shall not be liable for any indirect, special, incidental, consequential, or other losses of any kind arising from your use of this website, whitepaper, your acquisition or use of 86D tokens, or your participation in the ecosystem.
+            </p>
+        </div><br>
+        <div class="text-zinc-400 mb-2">
+            <img src="assets/images/section3.png" alt="Section 3 Divider" class="w-full h-auto"/>
+        </div>
+    </div>
 </main>
 </body>
 </html>
-
-	  
