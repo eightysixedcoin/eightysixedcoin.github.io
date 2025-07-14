@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eighty Sixed (86D) Coin</title>
 
-    <!-- Tailwind CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Tailwind CSS CDN - UPDATED TO LATEST VERSION -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Press Start 2P for pixelated headers -->
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Inter for the new scrollable feed content -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
         /* Base body styles */
         body {
             background-color: #000000; /* Black background */
-            color: #ccc; /* Light grey default text color */
+            color: #ccc; /* Light grey default text color - CORRECTED */
             font-family: 'Courier New', monospace; /* Monospace font for body text */
         }
 
@@ -47,6 +49,7 @@
         .bg-zinc-700 { background-color: #660000 !important; } /* Darker red (resolved conflict) */
         .bg-zinc-800 { background-color: #4d0000 !important; } /* Even darker red/brown */
         .border-zinc-700 { border-color: #ff0000 !important; } /* Bright red border */
+        .bg-zinc-400 { background-color: #ff0000 !important; } /* Bright red background - ADDED */
 
         .text-zinc-400 { color: #ff0000 !important; } /* Bright red text */
         .text-zinc-300 { color: #ffcccc !important; } /* Light pink text */
@@ -76,6 +79,22 @@
             padding: 10px;
             border-radius: 4px; /* Kept this one as it's for the audio player specifically */
         }
+
+        /* Custom scrollbar for Webkit browsers (Chrome, Safari) - Added for the new feed */
+        .scroll-container::-webkit-scrollbar {
+            width: 8px;
+        }
+        .scroll-container::-webkit-scrollbar-track {
+            background: #1a1a1a; /* Dark grey track, matching theme */
+            border-radius: 10px;
+        }
+        .scroll-container::-webkit-scrollbar-thumb {
+            background: #ff0000; /* Red thumb, matching theme */
+            border-radius: 10px;
+        }
+        .scroll-container::-webkit-scrollbar-thumb:hover {
+            background: #cc0000; /* Darker red on hover */
+        }
     </style>
 </head>
 <body class="p-6 text-sm">
@@ -83,9 +102,7 @@
 
     <!-- Launching Soon Banner -->
     <div>
-        <p class="bg-zero-100 border text-white mb-2 text-center py-4">
-            &#9679; &nbsp; L A U N C H I N G &nbsp;  8 / 6 &nbsp; 2 0 2 5 &nbsp; &#9679;
-      </p>
+        <p class="bg-zero-100 border text-white mb-2 text-center py-4">THE WALLS CLOSE IN ON 8/6</p>
     </div>
 
     <!-- Navigation and Header Image -->
@@ -108,7 +125,7 @@
 
     <!-- About Content Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-zinc-400 border border-zinc-700 p-4 shadow-inner space-y-4">
+        <div class="bg-zinc-100 border border-zinc-700 p-4 shadow-inner space-y-4">
             <div class="flex items-center space-x-4">
                 <div>
                     <h1 class="text-xl text-white">EightySixed (86D)</h1>
@@ -155,7 +172,7 @@
             <button onclick="window.open('https://eightysixedcoin.com', '_blank')"
                     class="w-full bg-zinc-400 border border-zinc-700 hover:bg-red-600 hover:border-red-600 p-2 text-center mt-2 text-white transition-colors duration-300">
                 00000008620250000000
-            </button>
+          </button>
         </div>
     </div>
 
@@ -163,36 +180,39 @@
     <div class="text-zero-150 mb-2">
         <p class="text-white text-center">THE LORE</p>
     </div>
-    <div class="bg-zero-100 border p-3 text-grey">
+    <div class="bg-zero-100 border p-3"> <!-- Removed text-grey -->
         <p class="text-white">A Battle Has Begun...<br>
-        48 "TarGIFs", coded digital assets, have been unleashed upon the world—engineered to distract, divide, and destroy. Our hero, Eddie Sixed, and the 86D community are all that stand in their way. Together, they aim to “eighty-six” these digital threats to humanity.</p>
+      48 "TarGIFs", coded digital assets, have been unleashed upon the world—engineered to distract, divide, and destroy. Our hero, Eddie Sixed, and the 86D community are all that stand in their way. Together, they aim to “eighty-six” these digital threats to humanity.</p>
     </div>
 <br>    <!-- WHY $86D WORKS Section -->
     <div class="text-zero-050 mb-2">
         <img src="assets/images/fafo.png" alt="FAFO" class="w-full h-auto mb-2"/><br>
         <h1 class="text-white mb-2 text-center">WHY $86D WORKS</h1>
     </div>
-    <div class="bg-zero-100 border p-3 text-grey">
+    <div class="bg-zero-100 border p-3"> <!-- Removed text-grey -->
         <p class="text-red">
             <strong> Most meme coins vanish quicker than a client list on Pam Bondi's desk</strong>. And honestly, we don't really care about your stubby dog, how morbidly obese your penguins are, or how 'problematic' your frog is.<br>
             <br>
 
 Okay, the frog does have its moments, but the bottom line is: <strong>meme coins start fun, then just get... boring</strong>. The crypto scene's packed with more mediocrity than a ivy league legacy admissions roster.<br><br>
 
-<strong>This is where $86D steps in.</strong> It's the coin for people who wanna laugh, talk a little smack, and sometimes just wish they could 'eighty-six' the world's problems away, one "TarGIF" at a time cause' we like our coins line we like our coffee; dark, bitter and good at getting rid of shit.<br><br>
-Rugs. Bots. Dead Discords. Annoying, right? Why not just build <strong>mechanics you want to watch. Something you can't look away from, like a car wreck, or Nancy Pelosi trying to look not ridiculous in a dashiki</strong>? Look, I'm not gonna hammer the point to death here, cause <strong>$86D might not be the coin the world wants</strong> (that's Bitcoin and we missed the boat too), but <strong>$86D is the coin the world deserves</strong>.<br><br>
+<strong>This is where $86D steps in.</strong> It's the coin for people who wanna laugh, talk a little smack, and sometimes just wish they could 'eighty-six' the world's problems away, one "TarGIF" at a time cause' we like our coins line we like our coffee; dark, bitter and good at getting rid of the bullshit.<br><br>
+Rugs. Bots. Dead Discords. Ridiculous. Just build <strong>mechanics you <em>have</em> to watch. Something you can't look away from, like a car wreck, or Nancy Pelosi trying to look comfortable in a dashiki</strong>? Look, I'm not gonna hammer the point to death here, cause <strong>$86D might not be the coin the world wants</strong> (that's Bitcoin and we missed the boat too), but <strong>$86D is the coin the world deserves</strong>.<br><br>
 This is the people's pump. And the only dump around here is the dumpster fire we're all trying to survive. So load up your bags, HODL tight, and let's burn some coins.</p>
     </div>
     <div class="text-zero-050 mb-2">
-             <h1 class="text-white mb-2 text-center">WHO $86D WORKS FOR</h1>
+            <h1 class="text-white mb-2 text-center">WHO $86D WORKS FOR</h1>
     </div>
-    <div class="bg-zero-100 border p-3 text-grey">
+    <div class="bg-zero-100 border p-3"> <!-- Removed text-grey -->
         <p class="text-red">
-           With our roots in the service and labor industries. We know the struggle. This isn't for "gain porn" shit posts based off trust fund play money or straight-up weirdo Instagram flexes. This is for the <em>mad lads and gals</em> who just want some breathing room, who accountability and common sense to matter again <strong>This is a coin for <em>everyone</em>.</strong><br><br>
-This isn't a rug or a scam; this is <strong>community from the streets</strong>. This is <strong>strength in numbers</strong>. This is <strong>a one-of-a-kind crypto art experiment to remind them who's really in charge</strong>.</p>
+            Coming from games, animation and apparel but rooted in the service and labor industries, we know the struggle. This isn't for "gain porn" shit posts based off trust fund play money or straight-up weirdo Instagram flexes. This is for the <em>mad lads and gals</em> who just want to believe in karma again. That accountability and common sense matter again <strong>This is a coin for <em>everyone</em>.</strong><br><br>
+This isn't a rug or a scam; this is <strong>community from the ground up after feeling beat down. This is strength in numbers</strong>. This is <strong>a one-of-a-kind crypto art experiment to remind them who's really in charge</strong>.</p>
     </div>
-
-    <!-- Tokenomics Section -->
+  <!-- Will Not Stand GIF -->
+    <div class="text-center mb-2">
+      <img src="assets/gifs/notStand.gif" alt="This Will Not Stand" class="w-full h-auto"/>
+    </div>
+  <!-- Tokenomics Section -->
     <div class="bg-black">
         <div class="text-red mb-2 text-left" id="TokenomicsSection">
             <p>TOKENOMICS</p><br>
@@ -231,7 +251,7 @@ This isn't a rug or a scam; this is <strong>community from the streets</strong>.
         <div class="text-zero-050 mt-6"><br>
             <h1 class="text-white text-center">LIST, CLUE & BURN MECHANICS</h1><br>
         </div>
-        <div class="bg-zero-200 border p-3 text-grey">
+        <div class="bg-zero-200 border p-3"> <!-- Removed text-grey -->
             <p class="text-white">
                 Every 86 days, a new <strong>List</strong> emerges, each containing six "TarGIFs" for Eddie &amp; community to <strong>“eighty-six"</strong>. If successful, <strong> coins burn</strong>
             </p>
@@ -311,21 +331,17 @@ This isn't a rug or a scam; this is <strong>community from the streets</strong>.
         </p>
     </div>
 
-    <!-- America Safe GIF -->
-    <div class="text-center mb-2">
+    
+
+  <!-- America Safe GIF -->
+    <!--<div class="text-center mb-2">
         <img src="assets/gifs/americaSafe.gif" alt="America Safe" class="w-full h-auto"/>
-    </div>
-
-    <!-- End is Night Image -->
-    <div class="text-left mb-2">
-        <img src="assets/images/endIsNightLeftBucketAlign.png" alt="End is Night" class="w-full h-auto"/>
-    </div>
-
-    <!-- Engagement, Giveaways & Media Section -->
+    </div>-->
+  <!-- Engagement, Giveaways & Media Section -->
     <div class="text-zinc-400 mb-2">
-        <h1 class="text-white mb-2 text-center">ENGAGEMENT, GIVEAWAYS &amp; MEDIA</h1>
+        <h1 class="text-white mb-2 text-center">GIVEAWAYS</h1>
     </div>
-    <div class="bg-zero-100 border border-zinc-800 px-1 py-2 p-3 text-grey">
+  <div class="bg-zero-100 border border-zero-050 px-3 py-2 p-3"> <!-- Removed text-grey -->
       <p class="text-zero-050">THE CYPHER GIVEAWAY<br>
             <span class="text-white">
                 After every List drops the community has 43 days to submit their guess at what each "TarGIF" means for a chance to win 86,000 86D and a shot at 1 of 86 exclusive NFTs from our upcoming NFT launch. Three winners are chosen and awarded, one each from three different categories for every List reveal.<br><br>
@@ -337,12 +353,122 @@ This isn't a rug or a scam; this is <strong>community from the streets</strong>.
             <br>
         </p>
     </div>
-
-    <!-- Media Section -->
-    <div class="text-zero-050 mb-2 mt-6">
-        <p class="text-center">MEDIA</p>
+  <!-- End is Night Image -->
+    <div class="text-left mb-2">
+        <img src="assets/images/endIsNightLeftBucketAlign.png" alt="End is Night" class="w-full h-auto"/>
     </div>
-    <div class="text-zero-150 mb-2">
+    <div class="text-zinc-400 mb-2">
+        <h1 class="text-white mb-2 text-center">ROADMAP</h1>
+    </div>
+
+    <!-- NEW: Twitter-like Image Scroll Feed -->
+    <div class="w-full max-w-md bg-zinc-000 rounded-xl shadow-lg overflow-hidden mx-auto my-8 font-['Inter']">
+        <!-- Header for the feed -->
+        <div class="p-4 bg-zero-100">
+            <h1 class="text-xl bg-zero-100 font-semibold text-white">LISTS &amp; TARGIF EVENTS</h1>
+            <p class="text-sm text-zinc-400">UPCOMING DROPS & IMPORTANT DATES</p>
+      </div>
+
+        <!-- Scrollable content area -->
+        <div class="scroll-container h-[60vh] overflow-y-scroll p-4 space-y-6">
+            <!-- List Drop Card -->
+          <div class="bg-zero-100 rounded-lg shadow-md overflow-hidden border border-zinc-700">
+                <img src="https://placehold.co/600x300/000000/ff0000?text=1st+List+Drop"
+                     alt="1st List Drop"
+                     class="w-full h-auto object-cover rounded-t-lg">
+                <div class="p-4 bg-zero-000">
+                    <p class="text-red text-sm"><strong>1st List Drop:</strong> August 6th, 2025</p>
+                    <p class="text-xs text-black mt-2">8:06 AM PST</p>
+                </div>
+            </div>
+
+            <!-- TarGIF Clue 1 Card -->
+            <div class="bg-zero-100 rounded-lg shadow-md overflow-hidden border border-zinc-700">
+              <img src="https://placehold.co/600x300/ff0000/ffffff?text=TarGIF+Clue+1"
+                     alt="TarGIF Clue 1"
+                     class="w-full h-auto object-cover rounded-t-lg">
+                <div class="p-4">
+                    <p class="text-zinc-300 text-sm"><strong>TarGIF Clue 1:</strong> August 6th, 2025</p>
+                    <p class="text-xs text-zinc-500 mt-2">8:06 AM PST (11:06 AM EST / 3:06 PM UTC)</p>
+                </div>
+            </div>
+
+            <!-- TarGIF Clue 2 Card -->
+            <div class="bg-zero-100 rounded-lg shadow-md overflow-hidden border border-zinc-700">
+              <img src="https://placehold.co/600x300/ff0000/ffffff?text=TarGIF+Clue+2"
+                     alt="TarGIF Clue 2"
+                     class="w-full h-auto object-cover rounded-t-lg">
+                <div class="p-4">
+                    <p class="text-zinc-300 text-sm"><strong>TarGIF Clue 2:</strong> August 9th, 2025</p>
+                    <p class="text-xs text-zinc-500 mt-2">6:42 PM PST (9:42 PM EST / 1:42 AM UTC Aug 10th)</p>
+                </div>
+            </div>
+
+            <!-- TarGIF Clue 3 Card -->
+            <div class="bg-zero-100 rounded-lg shadow-md overflow-hidden border border-zinc-700">
+              <img src="https://placehold.co/600x300/ff0000/ffffff?text=TarGIF+Clue+3"
+                     alt="TarGIF Clue 3"
+                     class="w-full h-auto object-cover rounded-t-lg">
+                <div class="p-4">
+                    <p class="text-zinc-300 text-sm"><strong>TarGIF Clue 3:</strong> August 13th, 2025</p>
+                    <p class="text-xs text-zinc-500 mt-2">5:18 AM PST (8:18 AM EST / 12:18 PM UTC)</p>
+                </div>
+            </div>
+
+            <!-- TarGIF Clue 4 Card -->
+            <div class="bg-zero-100 rounded-lg shadow-md overflow-hidden border border-zinc-700">
+              <img src="https://placehold.co/600x300/ff0000/ffffff?text=TarGIF+Clue+4"
+                     alt="TarGIF Clue 4"
+                     class="w-full h-auto object-cover rounded-t-lg">
+                <div class="p-4">
+                    <p class="text-zinc-300 text-sm"><strong>TarGIF Clue 4:</strong> August 16th, 2025</p>
+                    <p class="text-xs text-zinc-500 mt-2">3:54 PM PST (6:54 PM EST / 10:54 PM UTC)</p>
+                </div>
+            </div>
+
+            <!-- TarGIF Clue 5 Card -->
+            <div class="bg-zero-100 rounded-lg shadow-md overflow-hidden border border-zinc-700">
+              <img src="https://placehold.co/600x300/ff0000/ffffff?text=TarGIF+Clue+5"
+                     alt="TarGIF Clue 5"
+                     class="w-full h-auto object-cover rounded-t-lg">
+                <div class="p-4">
+                    <p class="text-zinc-300 text-sm"><strong>TarGIF Clue 5:</strong> August 20th, 2025</p>
+                    <p class="text-xs text-zinc-500 mt-2">2:30 AM PST (5:30 AM EST / 9:30 AM UTC)</p>
+                </div>
+            </div>
+
+            <!-- TarGIF Clue 6 Card -->
+            <div class="bg-zero-100 rounded-lg shadow-md overflow-hidden border border-zinc-700">
+              <img src="https://placehold.co/600x300/ff0000/ffffff?text=TarGIF+Clue+6"
+                     alt="TarGIF Clue 6"
+                     class="w-full h-auto object-cover rounded-t-lg">
+                <div class="p-4">
+                    <p class="text-zinc-300 text-sm"><strong>TarGIF Clue 6:</strong> August 23rd, 2025</p>
+                    <p class="text-xs text-zinc-500 mt-2">1:06 PM PST (4:06 PM EST / 8:06 PM UTC)</p>
+                </div>
+            </div>
+
+            <!-- Giveaway Card -->
+            <div class="bg-zero-150 rounded-lg shadow-md overflow-hidden border border-zinc-700">
+              <img src="https://placehold.co/600x300/ffffff/ff0000?text=Giveaway"
+                     alt="Giveaway"
+                     class="w-full h-auto object-cover rounded-t-lg">
+                <div class="p-4">
+                    <p class="text-zero-100 text-sm"><strong>Giveaway:</strong> September 18th, 2025</p>
+                    <p class="text-xs text-zinc-500 mt-2">8:06 AM PST (43 days after 1st List Drop)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END NEW: Twitter-like Image Scroll Feed -->
+
+
+  <!-- Media Section -->
+    <div class="text-zinc-400 mb-2">
+        <h1 class="text-white mb-2 text-center">MEDIA</h1>
+    </div>
+  
+  <div class="text-zero-150 mb-2">
         <p class="text-center">Eddie Sixed & The End Times <span class="text-red">"EightySixed Theme Teaser"</span></p>
         <audio controls loop preload="none" class="custom-player">
             <source src="assets/audio/preLaunchPromoTheme.mp3" type="audio/mpeg">
@@ -376,7 +502,7 @@ This isn't a rug or a scam; this is <strong>community from the streets</strong>.
             <p align="center">
                 <strong>© 2025 Eighyt Sixed Coin, Inc. All rights reserved.
             </p>
-        </div>
+  </div>
 </main>
 </body>
 </html>
